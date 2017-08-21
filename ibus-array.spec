@@ -48,16 +48,8 @@ rm -rf $RPM_BUILD_ROOT
 # %{python_sitearch}/ibus/*
 %dir %{_datadir}/ibus-array
 %{_datadir}/ibus-array/icons
-%{_datadir}/ibus-array/icons/ibus-array.png
 %{_datadir}/ibus-array/setup
-%{_datadir}/ibus-array/setup/config.py
-%{_datadir}/ibus-array/setup/config.pyc
-%{_datadir}/ibus-array/setup/config.pyo
-%{_datadir}/ibus-array/setup/main.py
-%{_datadir}/ibus-array/setup/main.pyc
-%{_datadir}/ibus-array/setup/main.pyo
 %{_datadir}/ibus-array/tables
-%{_datadir}/ibus-array/tables/array.db
 %{_datadir}/ibus/component/array.xml
 /usr/lib/ibus-engine-array
 /usr/lib/ibus-setup-array
