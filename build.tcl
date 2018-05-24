@@ -1,8 +1,8 @@
 #!/usr/bin/tclsh
 
 set arch "x86_64"
-set base "ibus-array-0.1.2"
-set fileurl "https://github.com/lexical/ibus-array/archive/release-0.1.2.tar.gz"
+set base "ibus-array-0.2.0"
+set fileurl "https://github.com/lexical/ibus-array/archive/release-0.2.0.tar.gz"
 
 set var [list wget $fileurl -O $base.tar.gz]
 exec >@stdout 2>@stderr {*}$var
