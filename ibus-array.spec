@@ -2,7 +2,7 @@
 %{!?python_sitearch: %define python_sitearch %(%{__python} -c "from distutils.sysconfig import get_python_lib; print get_python_lib(1)")}
 %define mod_path ibus-0.0
 Name:       ibus-array
-Version:    0.2.0
+Version:    0.2.1
 Release:    0
 Summary:    IBus Array 30 project
 License:    GPLv2+
