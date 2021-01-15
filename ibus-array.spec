@@ -5,7 +5,7 @@ Name:       ibus-array
 Version:    0.2.1
 Release:    0
 Summary:    IBus Array 30 project
-License:    GPLv2+
+License:    GPL-2.0-or-later
 Group:      System Environment/Libraries
 URL:        https://github.com/lexical/ibus-array
 Source0:    %{name}-%{version}.tar.gz
