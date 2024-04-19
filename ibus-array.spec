@@ -1,5 +1,5 @@
 Name:       ibus-array
-Version:    0.2.2_git20230502
+Version:    0.2.3
 Release:    0
 Summary:    IBus Array 30 project
 License:    GPL-2.0-or-later
@@ -8,8 +8,7 @@ URL:        https://github.com/lexical/ibus-array
 Source0:    %{name}-%{version}.tar.gz
 
 BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
-BuildRequires:  autoconf
-BuildRequires:  make
+BuildRequires:  meson
 BuildRequires:  gettext-devel
 BuildRequires:  ibus-devel
 BuildRequires:  libtool
@@ -25,14 +24,11 @@ IBus Array 30 project.
 %setup -q -n %{name}-%{version}
 
 %build
-./autogen.sh
-%configure --disable-static
-# make -C po update-gmo
-make %{?_smp_mflags}
+%meson
+%meson_build
 
 %install
-rm -rf $RPM_BUILD_ROOT
-make DESTDIR=${RPM_BUILD_ROOT} install
+%meson_install
 
 %find_lang %{name}
 
