@@ -8,7 +8,7 @@ exec >@stdout 2>@stderr {*}$var2
 
 cd $base
 
-set var2 [list git checkout 969cf4ba8d910574007d38989dac5b0e1f8aea15]
+set var2 [list git checkout 210a6f703be0754a96b2c1c75b9e7fd6e691c71d]
 exec >@stdout 2>@stderr {*}$var2
 
 set var2 [list git reset --hard]
