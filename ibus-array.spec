@@ -41,10 +41,7 @@ rm -rf $RPM_BUILD_ROOT
 %files -f %{name}.lang
 %defattr(-,root,root,-)
 %doc AUTHORS COPYING README
-%dir %{_datadir}/ibus-array
-%{_datadir}/ibus-array/icons
-%{_datadir}/ibus-array/setup
-%{_datadir}/ibus-array/tables
+%{_datadir}/%{name}/
 %{_datadir}/ibus/component/array.xml
 %{_ibus_libexecdir}/ibus-engine-array
 %{_ibus_libexecdir}/ibus-setup-array
