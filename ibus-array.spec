@@ -11,7 +11,6 @@ BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildRequires:  meson
 BuildRequires:  gettext-devel
 BuildRequires:  ibus-devel
-BuildRequires:  libtool
 BuildRequires:  sqlite3-devel
 BuildRequires:  opencc-devel
 
