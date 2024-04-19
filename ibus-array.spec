@@ -9,10 +9,14 @@ Source0:    %{name}-%{version}.tar.gz
 
 BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildRequires:  meson
-BuildRequires:  gettext-devel
 BuildRequires:  ibus-devel
-BuildRequires:  sqlite3-devel
+BuildRequires:  gettext-devel
 BuildRequires:  opencc-devel
+%if 0%{?suse_version}  || 0%{?sle_version} || 0%{?mandriva_version}
+BuildRequires:  sqlite3-devel
+%else
+BuildRequires:  sqlite-devel >= 3.0
+%endif
 
 Requires:   ibus
 
@@ -23,7 +27,7 @@ IBus Array 30 project.
 %setup -q -n %{name}-%{version}
 
 %build
-%meson
+%meson --libexecdir=%{_ibus_libexecdir}
 %meson_build
 
 %install
@@ -42,6 +46,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/ibus-array/setup
 %{_datadir}/ibus-array/tables
 %{_datadir}/ibus/component/array.xml
-/usr/libexec/ibus-engine-array
-/usr/libexec/ibus-setup-array
+%{_ibus_libexecdir}/ibus-engine-array
+%{_ibus_libexecdir}/ibus-setup-array
 
