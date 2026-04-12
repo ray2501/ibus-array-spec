@@ -1,14 +1,14 @@
 #!/usr/bin/tclsh
 
 set arch "x86_64"
-set base "ibus-array-0.2.3"
+set base "ibus-array-0.3.0"
 
 set var2 [list git clone https://github.com/lexical/ibus-array.git $base]
 exec >@stdout 2>@stderr {*}$var2
 
 cd $base
 
-set var2 [list git checkout f93e181e78e2861fceb9c2baa14dc67c8506963c]
+set var2 [list git checkout 988e3ed658a64bd7cfbe549aa6a78d40ceb59f9c]
 exec >@stdout 2>@stderr {*}$var2
 
 set var2 [list git reset --hard]
