@@ -1,5 +1,5 @@
 Name:       ibus-array
-Version:    0.3.0
+Version:    0.3.2
 Release:    0
 Summary:    IBus Array 30 project
 License:    GPL-2.0-or-later
