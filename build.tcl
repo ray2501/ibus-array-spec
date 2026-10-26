@@ -1,7 +1,7 @@
 #!/usr/bin/tclsh
 
 set arch "x86_64"
-set base "ibus-array-0.3.2"
+set base "ibus-array-0.3.3"
 
 set var2 [list git clone https://github.com/lexical/ibus-array.git $base]
 exec >@stdout 2>@stderr {*}$var2
